@@ -1,7 +1,6 @@
 /** @format */
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -11,24 +10,35 @@ class App extends Component {
 			monster: [
 				{
 					name: 'Aman',
+					id: 1,
 				},
 				{
 					name: 'Saurabh',
+					id: 2,
 				},
 				{
 					name: 'RKT',
+					id: 2,
 				},
 				{
 					name: 'Arun',
+					id: 3,
 				},
 				{
 					name: 'Anarth',
+					id: 4,
 				},
 			],
 		};
 	}
 	render() {
-		return <div className="App"></div>;
+		return (
+			<div className="App">
+				{this.state.monster.map((monster) => (
+					<h1>{monster.name}</h1>
+				))}
+			</div>
+		);
 	}
 }
 
